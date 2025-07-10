@@ -2,12 +2,14 @@ const projectList = [
   {
     title: "AI-Powered PDF Q&A Tool",
     desc: "Built with OpenAI + LangChain + React. Upload and ask questions about PDFs.",
-    link: "https://github.com/amiti7/pdf-qa-app"
+    link: "https://github.com/amiti7",
+    live: false
   },
   {
-    title: "Smart Resume Tailor",
-    desc: "Takes job description and tailors resume content using GPT-4.",
-    link: "https://github.com/amiti7/resume-matcher"
+    title: "Content Moderation Tool",
+    desc: "A powerful tool to moderate text and images for safety and compliance using advanced AI. Check for harmful content with real-time results.",
+    link: "https://moderate.vermacodes.in",
+    live: true
   }
 ];
 
@@ -20,7 +22,7 @@ export default function Projects() {
           <div key={i} className="p-6 border rounded shadow-sm hover:shadow-lg transition">
             <h4 className="text-xl font-semibold">{project.title}</h4>
             <p className="mt-2 text-gray-600">{project.desc}</p>
-            <a href={project.link} className="text-indigo-600 mt-3 inline-block hover:underline">View Code</a>
+            <a href={project.link} className="text-indigo-600 mt-3 inline-block hover:underline">{project.live?"Live Demo": "Coming Soon"}</a>
           </div>
         ))}
       </div>
